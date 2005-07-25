@@ -1,0 +1,53 @@
+NAME
+    WWW::Overture::Keywords - Query Overture keyword suggestion tool.
+
+VERSION
+     $Revision: 1.2 $
+     $Date: 2005/07/25 09:48:00 $
+
+SYNOPSIS
+      use WWW::Overture::Keywords;
+      my $ov = new WWW::Overture::Keywords;
+
+      my %keywords = $ov->get('keywords');
+
+DESCRIPTION
+    The WWW::Overture::Keywords module provides a method to query the
+    Overture keyword suggestion tool and return a list of related key
+    phrases, along with the frequency of searches for each key phrase.
+
+CONSTRUCTOR
+    new()
+      Creates and returns a new WWW::Overture::Keywords object.
+
+OBJECT METHODS
+    get($keyword)
+      Get related key phrases (with search counts) for $keyword.
+
+      In scalar context, returns a hash reference with the keyword info. In
+      list context, returns a hash with the same info.
+
+      On failure in scalar context, returns undef. On failure in list
+      context, returns a list containing undef and the LWP response object
+      that resulted from the Overture query.
+
+BUGS
+    * If you find any, please let me know!
+
+CHANGELOG
+      $Log: Keywords.pm,v $
+
+      Revision 1.1 2005/07/25 09:45:16 hash Initial commit
+
+AUTHOR
+    WWW::Overture::Keywords is Copyright (c) 2005 Ashish Gulhati <ashish at
+    neomailbox.com>. All Rights Reserved.
+
+ACKNOWLEDGEMENTS
+    Thanks to Barkha, my sunshine, and to Neomailbox -
+    http://neomailbox.com/
+
+LICENSE
+    This code is free software; you can redistribute it and/or modify it
+    under the same terms as Perl itself.
+
